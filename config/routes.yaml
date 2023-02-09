@@ -1,6 +1,10 @@
 # config/routes.yaml
 
-# the "app_hello_user" route name is not important yet
+# the "app_link" route name is not important yet
+app_link:
+    path: /link
+    controller: App\Controller\TestLink::link
+
 app_hello_user:
     path: /my/name
     controller: App\Controller\HelloUser::helloUser
