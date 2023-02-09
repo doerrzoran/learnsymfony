@@ -1,3 +1,15 @@
+# config/routes.yaml
+
+# the "app_hello_user" route name is not important yet
+app_hello_user:
+    path: /my/name
+    controller: App\Controller\HelloUser::helloUser
+
+# the "app_lucky_number" route name is not important yet
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
+
 controllers:
     resource: ../src/Controller/
     type: annotation
@@ -5,3 +17,5 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+
