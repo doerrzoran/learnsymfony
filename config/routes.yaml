@@ -1,5 +1,10 @@
 # config/routes.yaml
 
+# the "app_test_service" route name is not important yet
+app_service:
+    path: /service
+    controller: App\Controller\TestServices::testServices
+
 # the "app_test_request" route name is not important yet
 app_request:
     path: /request
