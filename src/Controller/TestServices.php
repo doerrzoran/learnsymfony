@@ -2,12 +2,12 @@
 namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
-use App\Services\ComplexObject;
+// use App\Services\Test;
 
 class TestServices{
 
     public function testServices(){
-        $test = new ComplexObject('test');
+        $test = new Test('test');
         return new Response($test->doSomething('test'));
     }
 }

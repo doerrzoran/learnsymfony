@@ -1,5 +1,10 @@
 # config/routes.yaml
 
+# the "app_test_hello_controller" route name is not important yet
+app_hello_controller:
+    path: /hello/controller
+    controller: App\Controller\HelloController::home
+
 # the "app_test_service" route name is not important yet
 app_service:
     path: /service
