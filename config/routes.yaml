@@ -1,34 +1,5 @@
 # config/routes.yaml
 
-# the "app_test_hello_controller" route name is not important yet
-app_hello_controller:
-    path: /hello/controller
-    controller: App\Controller\HelloController::home
-
-# the "app_test_service" route name is not important yet
-app_service:
-    path: /service
-    controller: App\Controller\TestServices::testServices
-
-# the "app_test_request" route name is not important yet
-app_request:
-    path: /request
-    controller: App\Controller\TestRequest::testRequest
-
-# the "app_link" route name is not important yet
-app_link:
-    path: /link
-    controller: App\Controller\TestLink::link
-
-app_hello_user:
-    path: /my/name
-    controller: App\Controller\HelloUser::helloUser
-
-# the "app_lucky_number" route name is not important yet
-app_lucky_number:
-    path: /lucky/number
-    controller: App\Controller\LuckyController::number
-
 controllers:
     resource: ../src/Controller/
     type: annotation
