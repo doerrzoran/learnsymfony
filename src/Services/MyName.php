@@ -2,8 +2,13 @@
 namespace App\Services;
 
 class MyName{
-    public function myName(){
-        return "<h1>Zoran</h1>";
+    private string $myName;
+
+    public function __construct(string $myName){
+        $this->myName = $myName;
+    }
+    public function myName(): string{
+        return "<h1>".$this->myName."</h1>";
     }
 }
 
