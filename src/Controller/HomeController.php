@@ -49,9 +49,13 @@ class HomeController extends AbstractController
     {
         return new Response('<form action="/message" method="POST"><input type="text" name="message"><button type="submit">cliquer ici</button></form>');
     }
-    #[Route('/message', name: 'message')]
+    #[Route('/message')]
     public function message()
     {
-        return new Response($_POST["message"]);
+        $request = Request::createFromGlobals();
+        $name = $request->get('message');
+        $response = new Response();
+
+        return $response->setContent('<html><body>Hello '. $name.'</body></html>');
     }
 }
