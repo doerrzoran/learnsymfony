@@ -35,13 +35,17 @@ class HomeController extends AbstractController
     #[Route('/link', name: 'link')]
     public function link()
     {
-        return new Response('<a href="/page">cliquer ici</a>');
+        return new Response('<a href="/page?id=page">cliquer ici</a>');
     }
 
-    #[Route('/page', name: 'page')]
+    #[Route('/page')]
     public function page()
     {
-        return new Response('hello');
+        $request = Request::createFromGlobals();
+        $name = $request->get('id');
+        $response = new Response();
+
+        return $response->setContent('<html><body>Hello '. $name.'</body></html>');
     }
 
     #[Route('/form', name: 'form')]
@@ -49,7 +53,8 @@ class HomeController extends AbstractController
     {
         return new Response('<form action="/message" method="POST"><input type="text" name="message"><button type="submit">cliquer ici</button></form>');
     }
-    #[Route('/message')]
+    
+    #[Route('/message', name: 'message')]
     public function message()
     {
         $request = Request::createFromGlobals();
